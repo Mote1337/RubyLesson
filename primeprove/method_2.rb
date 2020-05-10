@@ -1,7 +1,15 @@
 #!/usr/bin/ruby
 
-def double_my_number number
-  number *=2
+
+
+
+def my_method
+  puts "executing your code"
+  yield
+  puts "done"
 end
 
-double_my_number(5)
+my_method do
+  puts 2 + 2
+end
+
