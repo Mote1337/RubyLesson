@@ -1,0 +1,15 @@
+Our program will ask the user which train they want. then display the time table for that train. We will use an iterator to output the timetable one row at a time.
+ 
+1. Create a two element array, where each element is a hash.
+ 
+2. Give each hash a key / value pair for specifying each train route.
+ 
+3. Give each hash another key/value pair to hold the schedule. "schedule" should be the key; the value will be another hash.
+ 
+4. The innermost hashes should consist of key value pairs, with each city as a key, and the time as a value (as strings).
+ 
+5. Prompt the user to choose which schedule they want. Be sure to list their choices for them.
+ 
+6. Collect the user's response and display a table for them.
+ 
+7. Put it altogether and test the program.
