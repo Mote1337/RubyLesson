@@ -1,10 +1,9 @@
-#!/usr/bin/ruby
 
 # ESERCIZIO
 
 class Box
   attr_accessor :length, :width, :height, :weight, :distance
-  
+
   def initialize
     @@material_cost = 0.01 #1 cent per square inch
     @@rate = 0.01 #1 cent per pound mile
@@ -25,4 +24,3 @@ class Box
 end
 
 Box.length = "paolo"
-

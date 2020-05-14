@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 
 puts "Hello!"
 puts "Do you have a phone (Y/N)"

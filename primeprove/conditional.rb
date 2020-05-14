@@ -1,6 +1,5 @@
-#!/usr/bin/ruby
 
-my_variable = 15 
+my_variable = 15
 
 if my_variable > 10
 	puts "La mia variabile è più grande di 10 : " + my_variable.to_s

@@ -1,0 +1,22 @@
+ # ITERATOR
+
+# EACH su array
+# .each tira fuori un valore corrispondente all'elemento
+
+# linea singola
+names = ['Bob', 'Joe', 'Steve', 'Janice', 'Susan', 'Helen']
+names.each { |name| puts name }
+
+# multi linea
+names.each do |name|
+  puts "#{x}. #{name}"
+  x += 1
+end
+
+# EACH_INDEX
+# .each_index manda 1 valore corrispondente all'indice dell'array
+a.each_index { |i| puts "This is index #{i}" }
+
+#EACH_WITH_INDEX
+# .each_with_index tira fuori 2 valori, il primo è il valore dell'elemento il secondo è il valore dell'indice
+a.each_with_index { |val, idx| puts "#{idx+1}. #{val}" }

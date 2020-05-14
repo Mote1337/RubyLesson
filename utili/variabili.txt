@@ -1,0 +1,19 @@
+# Variabili
+# possibili operazioni
+
+# INPUT
+# gets
+prende l'Input, aggiunge \n alla fine
+# gets.strip!
+# gets.chomp
+prendono l'input e rimuovono il \n alla fine
+
+# INTEGER
+# x.odd?
+controlla se è pari
+# x.even?
+controlla se è dispari
+
+
+.empty?
+Verifica se la variabile è vuota ( nil )

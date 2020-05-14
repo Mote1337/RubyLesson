@@ -1,0 +1,33 @@
+# CICLI
+# Cicli struttura base
+# nei cicli si possono usare
+# next fa ripartire il ciclo senza verificare la condizione
+# break interrompe tutto e prosegue uscendo dal ciclo
+
+# LOOP
+ loop do
+   puts "This will keep printing until you hit Ctrl + c"
+ end
+
+# WHILE
+ while x >= 0
+   puts x
+   x -= 1 # <- refactored this line
+ end
+
+# UNTIL
+ until x < 0
+   puts x
+   x -= 1
+ end
+
+# DO/WHILE
+ begin
+  puts "Do you want to do that again?"
+  answer = gets.chomp
+end while answer == 'Y'
+
+# FOR
+ for i in 1..4 do
+   puts i
+ end

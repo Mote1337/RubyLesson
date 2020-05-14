@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 
 def multiply_this a, b
   total = a * b

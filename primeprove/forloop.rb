@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 bags = ["suitcase", "messenger_bag", "satchel", "backpack" ]
 
 for bag_type in bags do

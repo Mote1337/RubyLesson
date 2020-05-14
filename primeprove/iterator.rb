@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 
 grocery_items = {"oranges" => false, "banana" => false}
 puts "Do you need:"

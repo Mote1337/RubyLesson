@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 
 bank_account = 50
 puts "You have"

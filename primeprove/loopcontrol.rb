@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 #NEXT
 my_var = 0
 while my_var < 10 do

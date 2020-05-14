@@ -1,0 +1,61 @@
+# HASH
+
+# Sintassi di creazione VECCHIA e NUOVA(dalla 1.9)
+
+old_syntax_hash = {:name => 'bob'}
+new_hash = {name: 'bob'}
+
+# Operazioni
+person = { height: '6 ft', weight: '160 lbs' }
+# Aggiungere key: 'value'
+person[:hair] = 'brown'
+person[:age] = 62
+
+# Rimuovere entry
+person.delete(:age)
+
+# Richiedere valore
+person[:weight]
+
+# Merge tra hash
+person.merge!(new_hash) ## Distrugge e crea un nuovo hash
+person.merge(new_hash) ## Crea un nuovo hash mantenendo l'hash originale
+
+
+# METODI
+
+name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+
+# .has_key?
+Verifica se l'hash ha la chiave indicata
+  name_and_age.has_key?("Steve")
+  => true
+  name_and_age.has_key?("Larry")
+  => false
+
+# .select
+  name_and_age.select { |k,v| k == "Bob" }
+  => {"Bob"=>42}
+  name_and_age.select { |k,v| (k == "Bob") || (v == 19) }
+  => {"Bob"=>42, "Joe"=>19}
+
+# .fetch
+  name_and_age.fetch("Steve")
+  => 31
+  name_and_age.fetch("Larry")
+  => KeyError: key not found: "Larry"
+      from (irb):32:in `fetch'
+      from (irb):32
+      from /usr/local/rvm/rubies/ruby-2.5.3/bin/irb:16:in `<main>'
+  name_and_age.fetch("Larry", "Larry isn't in this hash")
+  => "Larry isn't in this hash"
+
+# .to_a
+  name_and_age.to_a
+  => [["Bob", 42], ["Steve", 31], ["Joe", 19]]
+
+# .keys & .value
+  name_and_age.keys
+  => ["Bob", "Steve", "Joe"]
+  name_and_age.values
+  => [42, 31, 19]

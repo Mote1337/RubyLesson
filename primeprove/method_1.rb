@@ -1,6 +1,3 @@
-#!/usr/bin/ruby
-
-
 #METHOD
 def hello_user
   puts "Enter your name"

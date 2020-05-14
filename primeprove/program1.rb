@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 puts "Inserisci un Numero"
 user_input = gets.to_i
 

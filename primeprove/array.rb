@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#Programma
 
 arraya = [5,45,1,26,49,30,7,15]
 

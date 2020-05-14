@@ -1,0 +1,30 @@
+OPERAZIONE CON ARRAY
+SELEZIONE
+# array.first
+Seleziona il primo elemento
+# array.last
+Seleziona l'ultimo elemento
+# array[3]
+Seleziona l'ultimo elemento in posizione 3
+# array.sort
+Ordina l'array crescente
+# array.include? x
+Domanda se è presente x nell'array
+# array.map { |num| num**2  }
+Divide ogni elemento per blocco e lo moltiplica (non modifica l'array)
+# array.uniq
+Rimuovi i doppioni e tira fuori un nuovo array (non modifica l'array attuale)
+# array.flatten -> convert un array multidimensionale in un array monodimensionale
+
+MODIFICA
+# array.push("another string")
+# array << "another string"
+Aggiungi l'elemento alla fine dell'array
+# array.pop
+Rimuovi l'ultimo campo dell'array
+# array.delete_at(1)
+Cancella l'elemento dell'array in posizione 1
+# array.delete("prova")
+Cerca l'elemento "prova" e lo cancella
+# array.uniq! -> Modifica anche l'array
+Rimuove i doppioni e modifica l'array
