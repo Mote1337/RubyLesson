@@ -1,4 +1,6 @@
 require 'io/console'
+#$stdin.winsize => returns array of [rows, columns]
+
 class BasicView
 
   def clear_display
@@ -13,7 +15,8 @@ class BasicView
   columns = $stdin.winsize[1]
   text_length = text.length
   column_location = columns / 2 - text_length / 2
-  "\e[#{column_location}G#{text}"
+  rows = $stdin.winsize[0] / 2
+  "\e[#{column_location}G\e[#{rows}B#{text}"
   end
 
   def red text
