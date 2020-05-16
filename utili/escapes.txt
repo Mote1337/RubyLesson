@@ -1,0 +1,31 @@
+
+
+
+\n new line
+\t tab
+\b backspace
+\\ \
+\" "
+http://en.wikipedia.org/wiki/ASCII#ASCII_control_code_chart
+
+ANSI terminal escapes
+
+\e[ + # + A -> Move Cursor Up # of lines
+\e[ + # + B -> Move Cursor Down # of lines
+\e[ + # + C -> Move Cursor Right # of lines
+\e[ + # + D -> Move Cursor Left # of lines
+\e[ + # + E -> Move Cursor Down # of lines to beginning
+\e[ + # + F -> Move Cursor Up # of lines to beginning
+\e[ + # + G -> Move Cursor to Column #
+http://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes
+
+\e[ SGR_Codes m
+
+ Codes 30-37 Set basic text colors
+ Codes 40-47 Set basic background colors
+ex:
+ \e[31;40m -> Sets black background with red text
+ \e[0m -> Resets SGR codes
+ http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+
+ 
