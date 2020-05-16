@@ -28,6 +28,7 @@ end
 class FileDialogView < BasicView
   def display
   puts red(center("Select an Apache log file."))
+  gets.chomp
   end
 end
 
