@@ -4,45 +4,53 @@
 #3)? Define an instance method in the class for calculating how much is needed for the next seven days.
 #4)? Define an array that will hold an ingredient in each slot.
 #5) Setup a program loop that gets user input at each iteration.
- while gets.chomp == true
-   fai qualcosa
- end
 #6)! Define a method that informs the user of their three choices. 1) Enter a new ingredient. 2) Print out the shopping list. 3) Exit.
 #7)! Setup a switch that checks for a user's choice.
 #8)? Define a method for adding an ingredient to the inventory. Be sure to prompt the user and record their input for type, stock, and daily use.
- def add
 #9)? Define a method for printing out the shopping needs for the next week.
 #10)! Exit the program loop if user_input is 3.
 #11)? Put it all together, making sure to call your shopping and inventory adding methods in your program loop. Make sure to call your info method at the appropriate time so that users know what to do.
+# Classe
 class Ingredient
-  attr_accessor :tipo, :quanto, :consumo
-
-  def consumo_week ingrediente
-    settimanalmente = (@consumo * 7) - @quanto
+  attr_accessor :type, :stock, :daily
+  def amount_needed
+  	@daily * 7 - @stock
   end
-
-  def add_ingredient ingrediente
-    @tipo.push("#{ingrediente}")
-  end
-
+end
+#Metodi
+def add_new_ingredient inventory
+	new_ingredient = Ingredient.new
+	puts "Type of ingredient"
+	new_ingredient.type = gets.strip
+	puts "Current Stock"
+	new_ingredient.stock = gets.to_i
+	puts "Daily Amount Required"
+	new_ingredient.daily = gets.to_i
+	inventory[inventory.size] = new_ingredient
 end
 
-def menu
-  puts "Menu Programma"
-  puts "[1] Enter a new ingredient"
-  puts "[2] Shopping List"
-  puts "[3] Exit"
-  case gets.chomp
-    when "1"
-      puts "Hai selezionato 1"
-      menu
-    when "2"
-      puts "Hai selezionato 2"
-      menu
-    when "3"
-      puts "Hai selezionato 3"
-      exit
-    end
-  end
+def info
+	puts "'1' to add an ingredient. '2' to print out shopping list '3' to exit"
+end
 
-menu
+def shopping_list inventory
+	inventory.each do |ingredient|
+		puts "#{ingredient.type} \t\t\t #{ingredient.amount_needed}"
+	end
+end
+#Fine Metodi
+
+inventory = []
+info
+while user_input = gets.strip
+  case user_input
+    when "1"
+      add_new_ingredient(inventory)
+      puts "Ingredient added"
+    when "2"
+      shopping_list(inventory)
+    when "3"
+      break
+    end
+  info
+  end
