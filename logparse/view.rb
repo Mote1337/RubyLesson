@@ -27,10 +27,35 @@ end
 
 class FileDialogView < BasicView
   def display
-  puts red(center("Select an Apache log file."))
-  gets.chomp
+    puts red(center("Select an Apache log file."))
+    gets.chomp
   end
+
+  def quittable?
+    true
+  end
+
+def parse_input user_input
+  case user_input
+  when "\n"
+    #change controller likely!
+    #check the View's current interaction
+    #index to see what's next!
+  when "\e[A"
+    #up button ... update the view with an
+    #up action!
+  when "\e[B"
+    #down!
+  when "\e[C"
+    #right
+  when "\e[D"
+    #left
+  else
+    #send other input to a selected input field
+  end
+  
 end
+
 
 class LogListView < BasicView
 end

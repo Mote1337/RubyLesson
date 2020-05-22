@@ -1,0 +1,21 @@
+
+
+
+
+.getc -> retrieves the next character and waits for a new one
+
+.getbyte -> retrieves the next byte and waits for a new one
+
+  getc and getbyte return nil at the end of a file (eof),
+  they wait for user input if called on $stdin
+
+.read -> read until eof, with blocking
+
+.read_nonblock max_length -> read max_length without blocking
+
+.readchar -> read single char with blocking until eof, raises error and blocks
+
+.readbyte -> as above but with bytes
+
+.readline -> like 'gets' but reaises an error
+ at eof
