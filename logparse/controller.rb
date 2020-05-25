@@ -15,8 +15,10 @@ class LogParserController
         while next_chars = $stdin.read_nonblock(10) do
           user_input = "#{user_input}#{next_chars}"
         end
-      rescue
-      end
+      rescue IO::WaitReadable
+      # No code here, since the error just means we got
+      # all the data
+    end
       if @current_view.quittable? && user_input == 'q'
         break
       else

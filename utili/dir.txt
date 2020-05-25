@@ -1,0 +1,9 @@
+Dir : Ruby's Directory class
+
+  reading directories:
+    .entries -> an array of directory contents
+    .each[_with_index] -> iterate through directory content
+  other useful methods:
+    Dir.exist? path -> check to see if a directory is there
+    Dir.rmdir path -> delete a directory if empty
+    Dir.new path! ! -> open a directory
